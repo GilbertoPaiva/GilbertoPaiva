@@ -5,7 +5,7 @@
 
 ### Projetos
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=GilbertoPaiva&repo=Projetos.github.io&theme=dark)](https://github.com/GilbertoPaiva/curso_ebac_backend)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=GilbertoPaiva&repo=curso_ebac_backend.github.io&theme=dark)](https://github.com/GilbertoPaiva/curso_ebac_backend)
 
 ### Linguagens utilizadas
 
