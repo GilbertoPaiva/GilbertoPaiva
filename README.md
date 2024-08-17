@@ -6,8 +6,6 @@
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=GilbertoPaiva&repo=customer-management&theme=dark)](https://github.com/GilbertoPaiva/customer-management)
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=GilbertoPaiva&repo=comprehensive-sales-system&theme=dark)](https://github.com/GilbertoPaiva/comprehensive-sales-system)
-
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=GilbertoPaiva&repo=factory-based-ecommerce&theme=dark)](https://github.com/GilbertoPaiva/factory-based-ecommerce)
 
 ### Linguagens utilizadas
