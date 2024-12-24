@@ -89,7 +89,7 @@
   <a href="https://www.instagram.com/gilbert0.br/" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="48" height="36" alt="instagram logo"  />
   </a>
-  <a href="gilberto.melo.paiva@gmail.com" target="_blank">
+  <a href="mailto:gilbert.melo.paiva@gmail.com" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="48" height="36" alt="gmail logo"  />
   </a>
 </div>
