@@ -69,7 +69,7 @@
 
 <br clear="both">
 
-[<img src="https://raw.githubusercontent.com/GilbertoPaiva/GilbertoPaiva/output/snake.svg" alt="Snake animation" />](https://platane.me/snk/)
+![snake gif](https://github.com/GilbertoPaiva/GilbertoPaiva/blob/output/github-snake-dark.svg)
 
 ###
 
