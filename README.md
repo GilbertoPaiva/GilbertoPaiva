@@ -59,13 +59,13 @@
 <br clear="both">
 
 <div align="Center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=GilbertoPaiva&hide_title=true&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=github_dark&locale=pt-br&hide_border=true&bg_color=0d1117&order=1" height="150" alt="GitHub stats"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=GilbertoPaiva&hide_title=true&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=radical&locale=pt-br&hide_border=true&order=1" height="150" alt="GitHub stats"/>
   
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=GilbertoPaiva&locale=pt-br&hide_title=true&layout=compact&card_width=320&langs_count=5&theme=github_dark&hide_border=true&bg_color=0d1117&order=2" height="150" alt="Top languages"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=GilbertoPaiva&locale=pt-br&hide_title=true&layout=compact&card_width=320&langs_count=5&theme=radical&hide_border=true&order=2" height="150" alt="Top languages"/>
   
-  <img src="https://nirzak-streak-stats.vercel.app/?user=GilbertoPaiva&locale=pt-br&mode=daily&theme=github-dark-blue&hide_border=true&border_radius=5&background=0d1117&order=3" height="150" alt="streak graph" /> <br>
+  <img src="https://nirzak-streak-stats.vercel.app/?user=GilbertoPaiva&locale=pt-br&mode=daily&theme=radical&hide_border=true&border_radius=5&order=3" height="150" alt="streak graph" /> <br>
   
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=GilbertoPaiva&radius=16&theme=github-compact&area=true&hide_border=true&bg_color=0d1117&order=5" height="300" alt="activity-graph graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=GilbertoPaiva&radius=16&theme=react-dark&area=true&hide_border=true&order=5" height="300" alt="activity-graph graph" />
 </div>
 
 ###
