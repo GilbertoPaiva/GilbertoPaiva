@@ -25,8 +25,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Generate Commit Shooter
-        run: node scripts/commit-shooter.mjs
+      - name: Generate Profile SVGs
+        run: node scripts/generate.mjs
         env:
           GITHUB_USER: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

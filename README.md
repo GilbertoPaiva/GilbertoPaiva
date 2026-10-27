@@ -20,12 +20,8 @@ Desenvolvedor **Full Stack**, bacharel em Ciência da Computação pela Universi
 <br><br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=GilbertoPaiva&show_icons=true&include_all_commits=true&count_private=true&locale=pt-br&hide_border=true&theme=github_dark" />
-  <img height="165" alt="Estatísticas do GitHub" src="https://github-readme-stats-sigma-five.vercel.app/api?username=GilbertoPaiva&show_icons=true&include_all_commits=true&count_private=true&locale=pt-br&hide_border=true&theme=default" />
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=GilbertoPaiva&layout=compact&langs_count=6&locale=pt-br&hide_border=true&theme=github_dark" />
-  <img height="165" alt="Linguagens mais usadas" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=GilbertoPaiva&layout=compact&langs_count=6&locale=pt-br&hide_border=true&theme=default" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GilbertoPaiva/GilbertoPaiva/output/stats-dark.svg" />
+  <img width="100%" alt="Estatísticas e linguagens mais usadas" src="https://raw.githubusercontent.com/GilbertoPaiva/GilbertoPaiva/output/stats-light.svg" />
 </picture>
 
 <br><br>

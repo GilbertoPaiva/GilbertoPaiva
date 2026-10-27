@@ -68,12 +68,20 @@ const SHIP = [
   'A...B...A',
 ];
 
-async function fetchCalendar() {
+async function fetchUser() {
   if (CONTRIB_FILE) {
-    return JSON.parse(await readFile(CONTRIB_FILE, 'utf8')).data.user.contributionsCollection.contributionCalendar;
+    return JSON.parse(await readFile(CONTRIB_FILE, 'utf8')).data.user;
   }
   const query = `query($login: String!) {
     user(login: $login) {
+      pullRequests { totalCount }
+      repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
+        totalCount
+        nodes {
+          stargazerCount
+          languages(first: 10, orderBy: { field: SIZE, direction: DESC }) { edges { size node { name color } } }
+        }
+      }
       contributionsCollection {
         contributionCalendar {
           totalContributions
@@ -89,7 +97,7 @@ async function fetchCalendar() {
   });
   const json = await res.json();
   if (!res.ok || json.errors) throw new Error(JSON.stringify(json.errors ?? json));
-  return json.data.user.contributionsCollection.contributionCalendar;
+  return json.data.user;
 }
 
 function streaks(days) {
@@ -281,10 +289,81 @@ function render(calendar, theme) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><style>${css.join('')}</style>${body.join('')}</svg>`;
 }
 
-const calendar = await fetchCalendar();
+const IGNORED_LANGUAGES = new Set(['Jupyter Notebook']);
+
+function topLanguages(repos, limit) {
+  const sizes = new Map();
+  for (const repo of repos) {
+    for (const { size, node } of repo.languages.edges) {
+      if (IGNORED_LANGUAGES.has(node.name)) continue;
+      const entry = sizes.get(node.name) ?? { name: node.name, color: node.color ?? '#8b949e', size: 0 };
+      entry.size += size;
+      sizes.set(node.name, entry);
+    }
+  }
+  const sorted = [...sizes.values()].sort((a, b) => b.size - a.size).slice(0, limit);
+  const total = sorted.reduce((sum, l) => sum + l.size, 0);
+  return sorted.map((l) => ({ ...l, share: l.size / total }));
+}
+
+function renderStats(user, theme) {
+  const c = THEMES[theme];
+  const width = PAD * 2 + user.contributionsCollection.contributionCalendar.weeks.length * PITCH - GAP;
+  const height = 150;
+  const repos = user.repositories.nodes;
+  const stats = [
+    [user.contributionsCollection.contributionCalendar.totalContributions, 'contribuições (12 meses)'],
+    [user.pullRequests.totalCount, 'pull requests'],
+    [user.repositories.totalCount, 'repositórios públicos'],
+    [repos.reduce((sum, r) => sum + r.stargazerCount, 0), 'estrelas recebidas'],
+  ];
+  const body = [];
+
+  body.push(`<rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="${c.bg}" stroke="${c.border}"/>`);
+  body.push(`<text x="${PAD}" y="26" font-size="13" fill="${c.text}">ESTATÍSTICAS</text>`);
+  stats.forEach(([value, label], i) => {
+    const x = PAD + (i % 2) * 175;
+    const y = 66 + Math.floor(i / 2) * 50;
+    body.push(`<rect x="${x}" y="${y - 17}" width="4" height="34" rx="1" fill="${c.levels[4 - Math.floor(i / 2)]}"/>`);
+    body.push(`<text x="${x + 14}" y="${y}" font-size="20" fill="${c.text}">${value}</text>`);
+    body.push(`<text x="${x + 14}" y="${y + 15}" font-size="11" font-weight="400" fill="${c.muted}">${label}</text>`);
+  });
+
+  const langX = 400;
+  const barWidth = width - PAD - langX;
+  const languages = topLanguages(repos, 6);
+  body.push(`<text x="${langX}" y="26" font-size="13" fill="${c.text}">LINGUAGENS</text>`);
+  body.push(`<clipPath id="bar"><rect x="${langX}" y="44" width="${barWidth}" height="10" rx="3"/></clipPath>`);
+  let offset = langX;
+  const segments = languages.map((l) => {
+    const w = l.share * barWidth;
+    const rect = `<rect x="${offset.toFixed(1)}" y="44" width="${(w + 0.5).toFixed(1)}" height="10" fill="${l.color}"/>`;
+    offset += w;
+    return rect;
+  });
+  body.push(`<g clip-path="url(#bar)">${segments.join('')}</g>`);
+  languages.forEach((l, i) => {
+    const x = langX + (i % 2) * (barWidth / 2);
+    const y = 84 + Math.floor(i / 2) * 24;
+    body.push(`<rect x="${x}" y="${y - 9}" width="9" height="9" rx="2" fill="${l.color}"/>`);
+    body.push(`<text x="${x + 16}" y="${y}" font-size="12" fill="${c.text}">${l.name}</text>`);
+    body.push(
+      `<text x="${x + barWidth / 2 - 24}" y="${y}" font-size="12" font-weight="400" text-anchor="end" fill="${c.muted}">${(l.share * 100).toFixed(1)}%</text>`,
+    );
+  });
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:700}</style>${body.join('')}</svg>`;
+}
+
+const user = await fetchUser();
 await mkdir(OUT_DIR, { recursive: true });
 for (const theme of Object.keys(THEMES)) {
-  const svg = render(calendar, theme);
-  await writeFile(`${OUT_DIR}/commit-shooter-${theme}.svg`, svg);
-  console.log(`${OUT_DIR}/commit-shooter-${theme}.svg ${(svg.length / 1024).toFixed(1)} KB`);
+  const files = {
+    [`commit-shooter-${theme}.svg`]: render(user.contributionsCollection.contributionCalendar, theme),
+    [`stats-${theme}.svg`]: renderStats(user, theme),
+  };
+  for (const [name, svg] of Object.entries(files)) {
+    await writeFile(`${OUT_DIR}/${name}`, svg);
+    console.log(`${OUT_DIR}/${name} ${(svg.length / 1024).toFixed(1)} KB`);
+  }
 }
