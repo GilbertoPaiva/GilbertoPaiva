@@ -1,19 +1,49 @@
-<br clear="both"> <img align="right" height="200" src="https://i.pinimg.com/736x/62/e4/4a/62e44ad3bfd439404ef233aa79b11faf.jpg" />
+<img align="right" height="180" src="https://i.pinimg.com/736x/62/e4/4a/62e44ad3bfd439404ef233aa79b11faf.jpg" />
 
-<h5 align="left">Olá! Sou Gilberto, bacharel em Ciência da Computação pela Universidade Potiguar e Desenvolvedor Full Stack.<br><br>Tenho experiência com Kotlin e Java, além de conhecimentos em bancos de dados relacionais e não relacionais. Também possuo familiaridade com arquiteturas monolíticas e microserviços.</h5>
+### Olá! Eu sou o Gilberto 👋
 
-<br clear="both"> <div align="center"> <img src="https://skillicons.dev/icons?i=kotlin" height="40" alt="kotlin logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=postman" height="40" alt="postman logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=postgres" height="40" alt="postgresql logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=java" height="40" alt="java logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=docker" height="40" alt="docker logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=idea" height="40" alt="intellijidea logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=github" height="40" alt="github logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=hibernate" height="40" alt="hibernate logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=spring" height="40" alt="spring logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=mysql" height="40" alt="mysql logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=js" height="40" alt="javascript logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=vscode" height="40" alt="vscode logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=bootstrap" height="40" alt="bootstrap logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=gcp" height="40" alt="googlecloud logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=gulp" height="40" alt="gulp logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=html" height="40" alt="html5 logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=jenkins" height="40" alt="jenkins logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=jquery" height="40" alt="jquery logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=mongodb" height="40" alt="mongodb logo" /> <img width="12" /> <img src="https://skillicons.dev/icons?i=solidjs" height="40" alt="solid logo" /> </div>
+Desenvolvedor **Full Stack**, bacharel em Ciência da Computação pela Universidade Potiguar.
 
-<br clear="both"> <div align="Center"> <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=GilbertoPaiva&hide_title=true&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=radical&locale=pt-br&hide_border=true&order=1" height="150" alt="GitHub stats"/> <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=GilbertoPaiva&locale=pt-br&hide_title=true&layout=compact&card_width=320&langs_count=5&theme=radical&hide_border=true&order=2" height="150" alt="Top languages"/>
-
-<img src="https://nirzak-streak-stats.vercel.app/?user=GilbertoPaiva&locale=pt-br&mode=daily&theme=radical&hide_border=true&border_radius=5&order=3" height="150" alt="streak graph" /> <br>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=GilbertoPaiva&radius=16&theme=react-dark&area=true&hide_border=true&order=5" height="300" alt="activity-graph graph" /> </div>
+- 🔧 No back-end, trabalho com **Java 21 + Spring Boot**, JPA/Hibernate e PostgreSQL
+- 🎨 No front-end, com **React + TypeScript** (e um pouco de Vue)
+- 🐳 Docker, Git e CI no dia a dia; experiência com monólitos e microsserviços
+- 🤖 Nas horas vagas, estudo IA aplicada e visão computacional com Python
 
 <br clear="both">
 
-<img src="https://github.com/GilbertoPaiva/GilbertoPaiva/blob/output/github-snake-dark.svg" alt="snake gif">
+<div align="center">
 
-<br clear="both"> <img align="right" src="https://profile-counter.glitch.me/GilbertoPaiva/count.svg?" />
+<img src="https://skillicons.dev/icons?i=java,spring,kotlin,hibernate,postgres,mysql,mongodb,docker&perline=8" alt="Back-end" />
+<br>
+<img src="https://skillicons.dev/icons?i=ts,js,react,vue,python,git,github,idea,vscode,postman&perline=10" alt="Front-end e ferramentas" />
 
-<div align="left"> <a href="https://www.linkedin.com/in/gilberto-paiva-melo/" target="_blank"> <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="48" height="36" alt="linkedin logo" /> </a> <a href="https://api.whatsapp.com/send/?phone=%2B55084999588387&text&type=phone_number&app_absent=0" target="_blank"> <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/whatsapp/default.svg" width="48" height="36" alt="whatsapp logo" /> </a> <a href="https://www.instagram.com/gilbert0.br/" target="_blank"> <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="48" height="36" alt="instagram logo" /> </a> <a href="mailto:gilbert.melo.paiva@gmail.com" target="_blank"> <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="48" height="36" alt="gmail logo" /> </a> </div>
+<br><br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api?username=GilbertoPaiva&show_icons=true&include_all_commits=true&count_private=true&locale=pt-br&hide_border=true&theme=github_dark" />
+  <img height="165" alt="Estatísticas do GitHub" src="https://github-readme-stats-sigma-five.vercel.app/api?username=GilbertoPaiva&show_icons=true&include_all_commits=true&count_private=true&locale=pt-br&hide_border=true&theme=default" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=GilbertoPaiva&layout=compact&langs_count=6&locale=pt-br&hide_border=true&theme=github_dark" />
+  <img height="165" alt="Linguagens mais usadas" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=GilbertoPaiva&layout=compact&langs_count=6&locale=pt-br&hide_border=true&theme=default" />
+</picture>
+
+<br><br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GilbertoPaiva/GilbertoPaiva/output/commit-shooter-dark.svg" />
+  <img width="100%" alt="Commit Shooter: uma nave em pixel art destruindo o gráfico de contribuições" src="https://raw.githubusercontent.com/GilbertoPaiva/GilbertoPaiva/output/commit-shooter-light.svg" />
+</picture>
+
+<br><br>
+
+<a href="https://www.linkedin.com/in/gilberto-paiva-melo/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://api.whatsapp.com/send/?phone=%2B55084999588387&text&type=phone_number&app_absent=0" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" /></a>
+<a href="https://www.instagram.com/gilbert0.br/" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+<a href="mailto:gilbert.melo.paiva@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" /></a>
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=GilbertoPaiva&label=visitas&color=2ea043&style=flat-square" alt="Visitas ao perfil" />
+
+</div>
