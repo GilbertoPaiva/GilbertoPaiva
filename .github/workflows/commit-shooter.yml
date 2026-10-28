@@ -29,7 +29,8 @@ jobs:
         run: node scripts/generate.mjs
         env:
           GITHUB_USER: ${{ github.repository_owner }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          PRIVATE_STATS: ${{ secrets.PROFILE_TOKEN != '' }}
 
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v4

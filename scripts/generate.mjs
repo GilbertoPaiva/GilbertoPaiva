@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const USER = process.env.GITHUB_USER;
 const TOKEN = process.env.GITHUB_TOKEN;
+const PRIVATE_STATS = process.env.PRIVATE_STATS === 'true';
 const OUT_DIR = process.env.OUT_DIR ?? 'dist';
 const CONTRIB_FILE = process.env.CONTRIB_FILE;
 
@@ -74,6 +75,7 @@ async function fetchUser() {
   }
   const query = `query($login: String!) {
     user(login: $login) {
+      pullRequests { totalCount }
       repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
         totalCount
         nodes {
@@ -315,8 +317,8 @@ function renderStats(user, theme) {
   const { totalCommitContributions, restrictedContributionsCount } = user.contributionsCollection;
   const commits = totalCommitContributions + restrictedContributionsCount;
   const stats = [
-    [user.contributionsCollection.contributionCalendar.totalContributions, 'contribuições (12 meses)'],
     [commits, 'commits (com privados)'],
+    [user.pullRequests.totalCount, PRIVATE_STATS ? 'pull requests (com privados)' : 'pull requests públicos'],
     [user.repositories.totalCount, 'repositórios públicos'],
     [repos.reduce((sum, r) => sum + r.stargazerCount, 0), 'estrelas recebidas'],
   ];
