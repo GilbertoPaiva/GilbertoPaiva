@@ -74,7 +74,6 @@ async function fetchUser() {
   }
   const query = `query($login: String!) {
     user(login: $login) {
-      pullRequests { totalCount }
       repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
         totalCount
         nodes {
@@ -83,6 +82,8 @@ async function fetchUser() {
         }
       }
       contributionsCollection {
+        totalCommitContributions
+        restrictedContributionsCount
         contributionCalendar {
           totalContributions
           weeks { contributionDays { date contributionCount contributionLevel weekday } }
@@ -311,9 +312,11 @@ function renderStats(user, theme) {
   const width = PAD * 2 + user.contributionsCollection.contributionCalendar.weeks.length * PITCH - GAP;
   const height = 150;
   const repos = user.repositories.nodes;
+  const { totalCommitContributions, restrictedContributionsCount } = user.contributionsCollection;
+  const commits = totalCommitContributions + restrictedContributionsCount;
   const stats = [
     [user.contributionsCollection.contributionCalendar.totalContributions, 'contribuições (12 meses)'],
-    [user.pullRequests.totalCount, 'pull requests'],
+    [commits, 'commits (com privados)'],
     [user.repositories.totalCount, 'repositórios públicos'],
     [repos.reduce((sum, r) => sum + r.stargazerCount, 0), 'estrelas recebidas'],
   ];
